@@ -1,0 +1,14 @@
+# Data Manipulation
+pandas
+numpy
+
+# HTTP Requests
+requests
+
+# Visualization
+matplotlib
+plotly
+
+# Database connection
+SQLAlchemy
+psycopg2-binary

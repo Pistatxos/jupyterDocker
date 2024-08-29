@@ -1,0 +1,18 @@
+services:
+  jupyterlab:
+    build: ./infrastructure
+    container_name: jupyterlab
+    ports:
+      - 8888:8888
+    volumes:
+      - ./datos:/home/jovyan/datos  # Monta el directorio de datos en un subdirectorio separado
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_TOKEN=AhB5ImyU2prh6vYJ5V1Kd # Token personalizado
+      - variableEnv1=ejemplo1 # Variable de entorno extras ejemplo
+    networks:
+      - shared_network # Añadir vuestra red
+
+networks:
+  shared_network:
+    external: true
